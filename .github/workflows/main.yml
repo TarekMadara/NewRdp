@@ -29,6 +29,6 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Create Tunnel
       run: | 
-           set PATH=%PATH%;C:\Program Files\OpenVPN\bin\
+           $env:PATH += ";C:\Program Files\OpenVPN\bin\"
            openvpn --config tarekmj.DL.ovpn
           
