@@ -11,7 +11,6 @@ jobs:
 
     steps:
     - name: Download
-      
       run: |
           Invoke-WebRequest https://swupdate.openvpn.org/community/releases/OpenVPN-2.6.10-I001-amd64.msi -OutFile openvpn.msi
           $file = "openvpn.msi" 
